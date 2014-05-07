@@ -5,7 +5,7 @@
 # Copyright 2014, Hiroki Endo
 #
 
-include_recipe "add_repo"
+include_recipe "glusterfs::add_repo"
 
 package "glusterfs-server"
 
