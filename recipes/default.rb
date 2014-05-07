@@ -24,5 +24,5 @@ service "glusterfs-server" do
   action [:enable, :start]
 end
 
-include_recipe "glustersf::filesystem"
+include_recipe "glusterfs::filesystem"
 
