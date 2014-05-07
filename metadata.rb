@@ -9,11 +9,10 @@ version          '0.1.0'
 recipe "glusterfs::client", "Installation client"
 recipe "glusterfs::server", "Installation server"
 
-%w{ yum apt glusterfs-server glusterfs-client }.each do |dep|
+%w{ yum apt glusterfs-server glusterfs-client xfsprogs }.each do |dep|
   depends dep
 end
 
 %w{ ubuntu }.each do |os|
   supports os
 end
-
