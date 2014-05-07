@@ -9,6 +9,10 @@ version          '0.1.0'
 recipe "glusterfs::client", "Installation client"
 recipe "glusterfs::server", "Installation server"
 
+%w{ apt }.each do |pkg|
+  depends pkg
+end
+
 %w{ ubuntu }.each do |os|
   supports os
 end
