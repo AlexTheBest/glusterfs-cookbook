@@ -13,8 +13,8 @@ mount gfs['mount'] do
 end
 
 execute 'mkfs' do
-  command "mkfs -t xfs -f gfs[:device]"
-  not_if "grep -qs gfs[:mount] /proc/mounts"
+  command "mkfs -t xfs -f " + gfs[:device]
+  not_if "grep -qs " + gfs[:mount] + " /proc/mounts"
 end
 
 mount gfs['mount'] do
