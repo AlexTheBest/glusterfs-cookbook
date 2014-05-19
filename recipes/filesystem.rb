@@ -27,7 +27,7 @@ end
 directory gfs['brick_dir'] do
   owner "root"
   group "root"
-  mode 00666
+  mode 00777
   action :create
 end
 
